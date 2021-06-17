@@ -1,0 +1,67 @@
+GCC - GNU Compiler Collection 
+
+Ќазвани€ регистров происход€т от их назначени€:
+
+EAX/AX/AH/AL (accumulator register) Ц аккумул€тор;
+EBX/BX/BH/BL (base register) Црегистр базы;
+ECX/CX/CH/CL (counter register) Ц счЄтчик;
+EDX/DX/DH/DL (data register) Ц регистр данных;
+ESI/SI (source index register) Ц индекс источника;
+EDI/DI (destination index register) Ц индекс приЄмника (получател€);
+ESP/SP (stack pointer register) Ц регистр указател€ стека;
+EBP/BP (base pointer register) Ц регистр указател€ базы кадра стека.
+
+http://natalia.appmat.ru/c&c++/assembler.html
+
+EIP - указатель инструкции
+
+http://www.ccfit.nsu.ru/~kireev/lab2/lab2reg.htm
+
+o - отобразить в виде восьмеричного числа;
+x - отобразить в виде шестнадцатеричного чилса;
+u - отобразить в виде дес€тичного целого без знака;
+t - отобразить в виде двоичного числа;
+
+set disassembly intel - set dis intel 
+
+info register eip - i r eip
+
+b - байт;
+h - полуслово (два байта);
+w - слово (четыре байта);
+g - гигантское слово (восемь байтов);
+
+nexti - next instruction;
+
+%d - ƒес€тичный;
+%u - ƒес€тичный без знака; (unsigned)
+%x - Ўестнадцатеричный (1 2 3 4 5 6 7 8 9 A B C D E F)
+
+%s - —трока (Sting);
+%n - количество записанных байтов;
+
+сегментов: код (text)
+инициализированные данные (data)
+неинициализированные данные (bss)
+куча (heap)
+стек (stack)
+
+регистер ESP хранит адрес вершины стека; 
+
+EBP регистер FP - frame pointer или указатель локальной базы LB - local base, 
+каждый кадр хранит в себе переданную в функцию параметры его локальные переменные 
+и два указател€: SFP -saved frame pointer (сохранненый указатель кадра) 
+чтобы вернутьс€ в основную программу и адрес возврата.
+
+ѕам€ть в куче выдел€етс€ с опомощью специальной функции malloc();
+
+библиотека fcntl.h:
+O_RDONLY - открывает файл только на чтение;
+O_WRONLY - открывает файл только на запись;
+O_RDWR - открывает файл на чтение и запись;
+O_APPEND - записывает данные в конец файла;
+O_TRUNC - если файл уже существует, сокращает его длину до нул€;
+O_CREAT - создаЄт файл, если его не существует;
+
+https://www.opennet.ru/docs/RUS/bogatyrev/gl_4.html
+https://www.opennet.ru/docs/RUS/zlp/005.html
